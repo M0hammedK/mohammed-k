@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Mohammed Al-Kaf",
@@ -15,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="grid grid-rows-[12%_76%_12%]">
+      <body>
         <Navbar />
         <main className="main-container">{children}</main>
         <Footer />

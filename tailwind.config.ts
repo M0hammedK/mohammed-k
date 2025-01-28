@@ -6,9 +6,9 @@ export default {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  safelist: [
-    { pattern: /.*/ }, // Safelist all classes
-  ],
+  // safelist: [
+  //   { pattern: /.*/ }, // Safelist all classes
+  // ],
   theme: {
     extend: {
       fontFamily:{
