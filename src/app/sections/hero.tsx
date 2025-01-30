@@ -26,11 +26,11 @@ export default function Hero() {
           <img
             src="/me.jpg"
             alt="Mohammed Al-kaf"
-            className="rounded-3xl shadow-xl hover:grayscale-0 transition-all duration-500"
+            className="my-img"
           />
         </div>
 
-        <div className="space-y-6 bg-background/90 backdrop-blur-sm p-8 rounded-xl shadow-lg w-fit">
+        <div className="space-y-6 bg-background/90 backdrop-blur-sm p-8 rounded-xl shadow-lg w-fit justify-self-center">
           <div className="font-bold bg-gray-950 p-6 rounded-lg transition-all duration-300 hover:bg-black">
             {/* Code Snippet with Editable Tailwind Classes */}
             <pre className="text-dark-blue-custom">&lt;div&gt;</pre>

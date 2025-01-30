@@ -7,16 +7,16 @@ import Projects from "./sections/projects";
 export default function Home() {
   return (
     <section id="home" className="block">
-      <section className="relative overflow-hidden">
+      <section className="responsive relative overflow-hidden">
         <Hero />
       </section>
-      <section id="about" className="mt-10">
+      <section id="about" className="responsive mt-10">
         <About />
       </section>
-      <section id="projects" className="mt-10">
+      <section id="projects" className="responsive mt-10">
         <Projects />
       </section>
-      <section id="contact" className="mt-10">
+      <section id="contact" className="responsive mt-10">
         <Contact />
       </section>
     </section>
