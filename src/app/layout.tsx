@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="flex flex-col min-h-screen justify-self-center bg">        
+      <body className="flex flex-col min-h-screen justify-self-center bg responsive">        
           <Navbar />
           <main>{children}</main>
         <Footer />

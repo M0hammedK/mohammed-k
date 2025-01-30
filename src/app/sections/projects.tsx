@@ -13,20 +13,18 @@ export default function Projects() {
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-8 text">My Projects</h2>
         <Swiper
-          slidesPerView={1}
-          spaceBetween={16}
-          centeredSlides
-          loop
-          breakpoints={{
-            320: { slidesPerView: 1 },
-            640: { slidesPerView: 1.2 },
-            768: { slidesPerView: 1.5 },
-            1024: { slidesPerView: 2.3 },
-          }}
-          modules={[Pagination]}
-          pagination={{ clickable: true }}
-          className="!pb-14"
-        >
+  slidesPerView={1}
+  spaceBetween={10}
+  loop
+  breakpoints={{
+    480: { slidesPerView: 1.2 },
+    768: { slidesPerView: 1.5 },
+    1024: { slidesPerView: 2.3 },
+  }}
+  pagination={{ clickable: true }}
+  className="!pb-14"
+  centeredSlides={true}
+>
           {/* Project 1 */}
           <SwiperSlide key="1" className="p-4">
             <div className="bg backdrop-blur-md rounded-lg shadow-lg p-8 hover:scale-105 transition-transform duration-300">

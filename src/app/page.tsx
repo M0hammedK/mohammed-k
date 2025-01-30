@@ -6,7 +6,7 @@ import Projects from "./sections/projects";
 
 export default function Home() {
   return (
-    <section id="home" className="block">
+    <section id="home" className="responsive block">
       <section className="responsive relative overflow-hidden">
         <Hero />
       </section>

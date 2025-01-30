@@ -5,32 +5,23 @@ import { div } from "framer-motion/client";
 import { useState } from "react";
 
 export default function Hero() {
-  // State to store Tailwind classes for each element
-  const [h1Classes, setH1Classes] = useState(
-    "text-4xl font-bold mb-4 text-gray-300"
-  );
-  const [h2Classes, setH2Classes] = useState(
-    "text-2xl font-semibold mb-2 text-gray-300"
-  );
+  const [h1Classes, setH1Classes] = useState("text-3xl sm:text-4xl font-bold mb-4 text-gray-300");
+  const [h2Classes, setH2Classes] = useState("text-xl sm:text-2xl font-semibold mb-2 text-gray-300");
   const [pClasses, setPClasses] = useState("text-gray-300");
 
   return (
-    // hero.tsx
-    <div className="block max-w-7xl h-980">
-      <svg width="864" height="1117" className="absolute z-0">
+    <div className="max-w-7xl mx-auto px-4 sm:px-8 h-auto sm:h-980 flex flex-col-reverse sm:flex-row items-center">
+      <svg width="100%" height="auto" className="absolute z-0 sm:w-864 sm:h-1117">
         <path d="M0 0L408 0C408 566.5 843.5 506 864 1117H0V0Z" fill="#645FCF" />
       </svg>
 
-      <div className="container h-full grid lg:grid-cols-2 gap-8 items-center z-10">
-        <div className="relative max-w-md mx-auto">
-          <img
-            src="/me.jpg"
-            alt="Mohammed Al-kaf"
-            className="my-img"
-          />
-        </div>
+      {/* Image Container */}
+      <div className="relative w-full max-w-xs sm:max-w-md mx-auto">
+        <img src="/me.jpg" alt="Mohammed Al-kaf" className="my-img" />
+      </div>
 
-        <div className="space-y-6 bg-background/90 backdrop-blur-sm p-8 rounded-xl shadow-lg w-fit justify-self-center">
+      {/* Text Content */}
+      <div className="space-y-6 bg-background/90 backdrop-blur-sm p-8 rounded-xl shadow-lg w-fit justify-self-center">
           <div className="font-bold bg-gray-950 p-6 rounded-lg transition-all duration-300 hover:bg-black">
             {/* Code Snippet with Editable Tailwind Classes */}
             <pre className="text-dark-blue-custom">&lt;div&gt;</pre>
@@ -80,7 +71,6 @@ export default function Hero() {
             <pre className="text-dark-blue-custom">&lt;/div&gt;</pre>
           </div>
         </div>
-      </div>
     </div>
   );
 }
