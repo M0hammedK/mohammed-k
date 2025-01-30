@@ -6,10 +6,13 @@ import { useState } from "react";
 
 export default function Hero() {
   // State to store Tailwind classes for each element
-  const [h1Classes, setH1Classes] = useState("text-4xl font-bold mb-4");
-  const [h2Classes, setH2Classes] = useState("text-2xl font-semibold mb-2");
-  const [pClasses, setPClasses] = useState("mb-6");
-  const [divClasses, setDivClasses] = useState("card bg-dark");
+  const [h1Classes, setH1Classes] = useState(
+    "text-4xl font-bold mb-4 text-gray-300"
+  );
+  const [h2Classes, setH2Classes] = useState(
+    "text-2xl font-semibold mb-2 text-gray-300"
+  );
+  const [pClasses, setPClasses] = useState("text-gray-300");
 
   return (
     // hero.tsx
@@ -27,15 +30,15 @@ export default function Hero() {
           />
         </div>
 
-        <div className="space-y-6 bg-background/90 backdrop-blur-sm p-8 rounded-xl shadow-lg">
-          <div className="font-bold bg-gray-300 p-6 rounded-lg transition-all duration-300 hover:bg-gray-400">
+        <div className="space-y-6 bg-background/90 backdrop-blur-sm p-8 rounded-xl shadow-lg w-fit">
+          <div className="font-bold bg-gray-950 p-6 rounded-lg transition-all duration-300 hover:bg-black">
             {/* Code Snippet with Editable Tailwind Classes */}
             <pre className="text-dark-blue-custom">&lt;div&gt;</pre>
             <pre className="ml-4 text-dark-blue-custom">
               &lt;h1 <span className="text-light-blue-custom">class</span>
               <span className="text-light-blue-custom">=</span>
               <input
-                className="text-brown-custom bg-gray-100 border border-gray-700 rounded px-2"
+                className="text-brown-custom bg4 border border-gray-700 rounded px-2"
                 value={h1Classes}
                 onChange={(e) => setH1Classes(e.target.value)}
                 size={h1Classes.length}
@@ -48,20 +51,20 @@ export default function Hero() {
               &lt;h2 <span className="text-light-blue-custom">class</span>
               <span className="text-light-blue-custom">=</span>
               <input
-                className="text-brown-custom bg-gray-100 border border-gray-700 rounded px-2"
+                className="text-brown-custom bg4 border-gray-700 rounded px-2"
                 value={h2Classes}
                 onChange={(e) => setH2Classes(e.target.value)}
                 size={h2Classes.length}
               />
               &gt;
             </pre>
-            <h2 className={`ml-8 ${h2Classes}`}>I am a Passionate Developer</h2>
+            <h2 className={`ml-8 ${h2Classes}`}>I am a Backend Developer</h2>
             <pre className="ml-4 text-dark-blue-custom">&lt;/h2&gt;</pre>
             <pre className="ml-4 text-dark-blue-custom">
               &lt;p <span className="text-light-blue-custom">class</span>
               <span className="text-light-blue-custom">=</span>
               <input
-                className="text-brown-custom bg-gray-100 border border-gray-700 rounded px-2"
+                className="text-brown-custom bg4 border-gray-700 rounded px-2"
                 value={pClasses}
                 onChange={(e) => setPClasses(e.target.value)}
                 size={pClasses.length}
@@ -69,8 +72,9 @@ export default function Hero() {
               &gt;
             </pre>
             <p className={`ml-8 font-normal ${pClasses}`}>
-              Specializing in building modern, responsive, and user-friendly web
-              applications.
+              Specializing in building server side app, mobile app and solve
+              problems. <br /> <b className="text-red-700">Note:</b>{" "}
+              <u>these styles are editable</u>
             </p>
             <pre className="ml-4 text-dark-blue-custom">&lt;/p&gt;</pre>
             <pre className="text-dark-blue-custom">&lt;/div&gt;</pre>

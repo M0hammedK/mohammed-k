@@ -6,8 +6,8 @@ import Projects from "./sections/projects";
 
 export default function Home() {
   return (
-    <section className="block">
-      <section className="hero-size bg-gray-50 relative overflow-hidden">
+    <section id="home" className="block">
+      <section className="relative overflow-hidden">
         <Hero />
       </section>
       <section id="about" className="mt-10">

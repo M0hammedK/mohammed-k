@@ -12,9 +12,9 @@ function Navbar() {
   };
 
   return (
-    <div className="sticky top-0 w-full z-50 backdrop-blur-lg p-8">
+    <div className="sticky top-0 w-full z-50 backdrop-blur-md p-8">
       <div className="absolute min-w-1280 anchor">
-        <nav className=" text-gray-600">
+        <nav className=" text">
           <div className="grid lg:grid-cols-[5%_75%_15%] md:grid-cols-[10%_60%_30%] grid-cols-[20%_80%] gap-2">
             {/* Left section for Lottie and mobile name */}
             <div className="md:flex items-center gap-5 ps-6">

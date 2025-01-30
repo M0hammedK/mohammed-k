@@ -5,12 +5,13 @@ import { Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import Image from "next/image";
 
 export default function Projects() {
   return (
-    <div className="bg-gray-600 py-12">
+    <div className="bg4 card py-12">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-8">My Projects</h2>
+        <h2 className="text-3xl font-bold text-center mb-8 text">My Projects</h2>
         <Swiper
           slidesPerView={1}
           spaceBetween={16}
@@ -26,57 +27,45 @@ export default function Projects() {
           pagination={{ clickable: true }}
           className="!pb-14"
         >
-          <SwiperSlide key="0" className="p-4">
-            <div className="bg-white/10 backdrop-blur-md rounded-lg shadow-lg p-8 hover:scale-105 transition-transform duration-300">
-              <h3 className="text-2xl font-bold mb-3 text-gray-100">
-                project1
-              </h3>
-              <p className="text-gray-300">bla bla bla</p>
-            </div>
-          </SwiperSlide>
-          {/* Project 3 */}
+          {/* Project 1 */}
           <SwiperSlide key="1" className="p-4">
-            <div className="bg-white/10 backdrop-blur-md rounded-lg shadow-lg p-8 hover:scale-105 transition-transform duration-300">
-              <h3 className="text-2xl font-bold mb-3 text-gray-100">
-                Project 1
+            <div className="bg backdrop-blur-md rounded-lg shadow-lg p-8 hover:scale-105 transition-transform duration-300">
+              <Image src={'/dojo.png'} width={400} height={400} alt="dojo"></Image>
+              <h3 className="text-2xl font-bold mb-3 text2">
+                DojoK Helpdesk
               </h3>
-              <p className="text-gray-300">Description for project 3.</p>
             </div>
           </SwiperSlide>
 
           {/* Signa */}
           <SwiperSlide key="2" className="p-4">
-            <div className="bg-white/10 backdrop-blur-md rounded-lg shadow-lg p-8 hover:scale-105 transition-transform duration-300">
-              <h3 className="text-2xl font-bold mb-3 text-gray-100">
-                Project 2
+            <div className="bg backdrop-blur-md rounded-lg shadow-lg p-8 hover:scale-105 transition-transform duration-300">
+              <Image src={'/buddy.png'} width={400} height={400} alt="buddy"></Image>
+              <h3 className="text-2xl font-bold mb-3 text2">
+                Workout Buddy
               </h3>
-              <p className="text-gray-300">
-                We help clients solve our CUS SDN!
-              </p>
             </div>
           </SwiperSlide>
 
           {/* Signa */}
           <SwiperSlide key="3" className="p-4">
-            <div className="bg-white/10 backdrop-blur-md rounded-lg shadow-lg p-8 hover:scale-105 transition-transform duration-300">
-              <h3 className="text-2xl font-bold mb-3 text-gray-100">
-                Project 3
+            <div className="bg backdrop-blur-md rounded-lg shadow-lg p-8 hover:scale-105 transition-transform duration-300">
+              <Image src={'/blog.png'} width={400} height={400} alt="blog"></Image>
+              <h3 className="text-2xl font-bold mb-3 text2">
+                K-Blog
               </h3>
-              <p className="text-gray-300">
-                We help clients solve our CUS SDN!
-              </p>
+             
             </div>
           </SwiperSlide>
 
           {/* Signa */}
           <SwiperSlide key="4" className="p-4">
-            <div className="bg-white/10 backdrop-blur-md rounded-lg shadow-lg p-8 hover:scale-105 transition-transform duration-300">
-              <h3 className="text-2xl font-bold mb-3 text-gray-100">
-                Project 4
+            <div className="bg backdrop-blur-md rounded-lg shadow-lg p-8 hover:scale-105 transition-transform duration-300">
+              <Image src={'/food.png'} width={400} height={400} alt="food"></Image>
+              <h3 className="text-2xl font-bold mb-3 text2">
+                Food Al-Kaf
               </h3>
-              <p className="text-gray-300">
-                We help clients solve our CUS SDN!
-              </p>
+            
             </div>
           </SwiperSlide>
         </Swiper>

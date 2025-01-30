@@ -119,17 +119,52 @@
 
 /* Swiper customizations */
 .swiper {
-  @apply pb-14;
+  padding: 20px 0 !important;
 }
 
 .swiper-slide {
-  @apply opacity-40 scale-90 transition-all;
-  
-  &-active {
-    @apply opacity-100 scale-100;
-  }
-  
-  &-next {
-    @apply opacity-70 scale-95;
-  }
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
+  transform: scale(0.5);
+}
+
+.swiper-slide-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.swiper-slide-next {
+  opacity: 0.7;
+  transform: scale(0.5);
+}
+
+
+.bg{
+  background-color: #111827;
+}
+.bg2{
+  background-color: #645FCF;
+}
+.bg3{
+  background-color: #D7D7D7;
+}
+.bg4{
+  background-color: rgb(32, 41, 56);
+}
+.text{
+  color: #645FCF;
+}
+.text2{
+color: #D7D7D7;
+}
+
+/* Custom text color classes */
+.text-dark-blue-custom {
+  @apply text-blue-600 hover:text-blue-500 transition-all duration-300;
+}
+.text-light-blue-custom {
+  @apply text-blue-400 hover:text-blue-300 transition-all duration-300;
+}
+.text-brown-custom {
+  @apply text-amber-700 hover:text-amber-600 transition-all duration-300;
 }
