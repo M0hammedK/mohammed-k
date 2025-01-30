@@ -61,7 +61,7 @@
    justify-self: anchor-center;
   }
   .container {
-    @apply max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-8;
+    @apply max-w-7xl mx-auto px-4 sm:px-8;
   }
 
   .section-padding {
@@ -175,5 +175,5 @@ color: #D7D7D7;
   align-content: center;
 }
 .my-img{
-  @apply relative z-50 rounded-3xl transition-all duration-500  max-w-96 max-h-96 min-h-48 min-w-48
+  @apply relative z-50 rounded-3xl transition-all duration-500 w-full max-w-xs sm:max-w-md mx-auto
 }

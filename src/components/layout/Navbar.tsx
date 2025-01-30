@@ -1,38 +1,60 @@
-"use client"
+"use client";
 
-import { useState, useRef } from "react";
+import { useRef } from "react";
 import useLottieAnimation from "@/hooks/useLottieAnimation";
-import { FaBars, FaTimes } from "react-icons/fa";
 
 function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const { toggleAnimation } = useLottieAnimation(containerRef);
 
+  const handleClick = () => {
+    toggleAnimation(); // Trigger Lottie animation (e.g., theme toggle)
+  };
+
   return (
-    <div className="sticky top-0 w-full z-50 backdrop-blur-md p-4 sm:p-8">
-      <div className="container flex items-center justify-between">
-        {/* Lottie Animation & Logo */}
-        <div className="flex items-center gap-4">
-          <div className="cursor-pointer" onClick={toggleAnimation}>
-            <div ref={containerRef} className="w-8 sm:w-10" />
+    <div className="sticky top-0 w-full z-50 backdrop-blur-md p-8">
+      <div className="absolute min-w-1280 anchor">
+        <nav className=" text">
+          <div className="grid lg:grid-cols-[5%_75%_15%] md:grid-cols-[10%_60%_30%] grid-cols-[20%_80%] gap-2">
+            {/* Left section for Lottie and mobile name */}
+            <div className="md:flex items-center gap-5 ps-6">
+              <div className="cursor-pointer" onClick={handleClick}>
+                <div ref={containerRef} className="w-10" />
+              </div>
+              <div className="sm:hidden col-span-2 justify-self-center">
+                <h4 className="title">Mohammed Al-Kaf</h4>
+              </div>
+              <div>
+                <a href="#" className="block sm:hidden text-left">
+                  <u>EN</u>
+                </a>
+                <a href="#" className="hidden sm:block">
+                  <u>EN</u>
+                </a>
+              </div>
+            </div>
+
+            {/* Center name (visible on medium screens and above) */}
+            <div className="hidden sm:block justify-items-center">
+              <h4 className="body">
+                <a href="#" className="title">Mohammed Al-Kaf</a>
+              </h4>
+            </div>
+
+            {/* Right section for navigation links */}
+            <div className="sm:col-auto self-center">
+              <ul className="flex justify-between w-max">
+                {["home", "about", "projects", "contact"].map((section) => (
+                  <li key={section} className="nav-item">
+                    <a href={`#${section}`}>
+                      {section.charAt(0).toUpperCase() + section.slice(1)}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
-          <h4 className="text-lg sm:text-2xl font-bold">Mohammed Al-Kaf</h4>
-        </div>
-
-        {/* Hamburger Menu (Mobile) */}
-        <button className="sm:hidden" onClick={() => setMenuOpen(!menuOpen)}>
-          {menuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
-        </button>
-
-        {/* Navigation Links */}
-        <ul className={`sm:flex gap-6 ${menuOpen ? "block" : "hidden"} absolute sm:static top-16 left-0 w-full sm:w-auto bg-gray-800 sm:bg-transparent p-4 sm:p-0`}>
-          {["home", "about", "projects", "contact"].map((section) => (
-            <li key={section} className="nav-item text-white sm:text-gray-900">
-              <a href={`#${section}`} className="block sm:inline-block p-2">{section.toUpperCase()}</a>
-            </li>
-          ))}
-        </ul>
+        </nav>
       </div>
     </div>
   );

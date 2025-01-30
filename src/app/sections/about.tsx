@@ -1,18 +1,11 @@
 export default function About() {
   return (
-    <section className="bg4 py-16 md:py-24">
-      <div className="container px-4 mx-auto">
-        <div className="max-w-3xl mx-auto text-center">
-          <h1 className="text-3xl md:text-4xl font-bold mb-4 md:mb-6 text">
-            About Me
-          </h1>
-          <h1 className="text-base md:text-lg opacity-90 leading-relaxed text2">
-          'I'm Mohammed Backend devoloper. <br />
-          I like to learn everything new in backend world, and try to make the customers hubby about my works.
-            {/* Add more content with responsive spacing */}
-          </h1>
-        </div>
-      </div>
-    </section>
+    <div className="about-me-section py-8 sm:py-12 bg-gray-800 text-gray-200 text-center">
+  <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-blue-400">About Me</h2>
+  <p className="max-w-screen-sm mx-auto text-lg leading-relaxed">
+    I'm <span className="font-semibold">Mohammed</span>, a backend developer. 
+    I enjoy exploring the backend world and strive to make customers happy with my work.
+  </p>
+</div>
   );
 }
