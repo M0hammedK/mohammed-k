@@ -17,16 +17,23 @@ export default {
         A_body: ['Scheherazade New'],
       },
       screens: {
-        'sm': '850px',
-        'md': '850px',
-        's_lg': '1050',
-        'lg': '1420px',
+        xs: '320px',
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1280px',
       },
       fontSize:{
         's_lg': '1rem'
       },
       backgroundColor: {
         'card': '#1a202c'
+      },
+      height:{
+        '980': '800px'
+      },
+      minWidth:{
+        '1280': '1280px'
       }
     },
   },

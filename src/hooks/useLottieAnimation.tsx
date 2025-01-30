@@ -29,7 +29,7 @@ const useLottieAnimation = (containerRef: React.RefObject<HTMLDivElement | null>
         path: animationPath,
       });
       animationRef.current = animation;
-      animation.setSpeed(2);
+      animation.setSpeed(1.5);
 
       // Add hover event listeners
       const container = containerRef.current;

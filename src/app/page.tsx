@@ -1,25 +1,24 @@
-import { Footer } from "@/components/Footer";
-import About from "./about";
-import Contact from "./contact";
-import Hero from "./hero";
-import Projects from "./projects";
+import { Footer } from "@/components/layout/Footer";
+import About from "./sections/about";
+import Contact from "./sections/contact";
+import Hero from "./sections/hero";
+import Projects from "./sections/projects";
 
 export default function Home() {
-
   return (
-    <div>
-      <div id="#main">
+    <section className="block">
+      <section className="hero-size bg-gray-50 relative overflow-hidden">
         <Hero />
-      </div>
-      <div id="#about" className="pt-20">
+      </section>
+      <section id="about" className="mt-10">
         <About />
-      </div>
-      <div id="#projects" className="pt-20">
+      </section>
+      <section id="projects" className="mt-10">
         <Projects />
-      </div>
-      <div id="#contact" className="pt-20">
+      </section>
+      <section id="contact" className="mt-10">
         <Contact />
-      </div>
-    </div>
+      </section>
+    </section>
   );
 }

@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Italiana&family=Scheherazade+New:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: 99 95 207; /* RGB values for #635FCF */
+    --secondary: 101 163 255;
+    --background: 249 250 251;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-gray-50 text-gray-900;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-bold;
+  }
+  .title{
+    @apply font-title text-2xl
+  }
+  .my-body{
+    @apply font-bold
+  }
+}
+
+@layer components {
+  
+  .nav-item {
+    @apply relative font-medium px-4 py-2 transition-colors;
+    
+    &::after {
+      @apply content-[''] absolute bottom-0 left-1/2 w-0 h-0.5 transition-all;
+      background-color: rgb(var(--primary));
+    }
+    
+    &:hover {
+      @apply text-primary;
+      
+      &::after {
+        @apply left-0 w-full;
+      }
+    }
+  }
+
+  .project-card {
+    @apply bg-white/90 backdrop-blur-md rounded-xl p-6 shadow-lg hover:shadow-xl transition-all;
+  }
+
+  .text-primary {
+    color: rgb(var(--primary));
+  }
+
+  .bg-primary {
+    background-color: rgb(var(--primary));
+  }
+
+  .anchor{
+   align-self: anchor-center;
+   justify-self: anchor-center;
+  }
+  .container {
+    @apply max-w-[1200px] w-full mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-12 md:py-16 lg:py-24;
+  }
+
+  .responsive-text {
+    @apply text-base md:text-lg lg:text-xl;
+  }
+
+  @media (max-width: 640px) {
+    .swiper-slide {
+      width: 85% !important;
+    }
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .fill-primary {
+    fill: rgb(var(--primary));
+  }
+
+  /* Custom animation */
+  .animate-slide-in {
+    animation: slideIn 0.3s ease-out;
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  .prose-responsive {
+    @apply text-sm sm:text-base md:text-lg;
+  }
+  
+  .heading-responsive {
+    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl;
+  }
+}
+
+/* Swiper customizations */
+.swiper {
+  @apply pb-14;
+}
+
+.swiper-slide {
+  @apply opacity-40 scale-90 transition-all;
+  
+  &-active {
+    @apply opacity-100 scale-100;
+  }
+  
+  &-next {
+    @apply opacity-70 scale-95;
+  }
+}
