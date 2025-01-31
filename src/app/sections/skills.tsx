@@ -21,7 +21,7 @@ export default function Skills() {
             <div className="progress">
               <span className="skill"><span>C#</span> <i className="val">100%</i></span>
               <div className="progress-bar-wrap">
-                <div className="progress-bar" role="progressbar" aria-valuenow={100} aria-valuemin={0} aria-valuemax={100}></div>
+                <div className="progress-bar" role="progressbar" aria-valuenow={100}  aria-valuemin={0} aria-valuemax={100}></div>
               </div>
             </div>
             {/* <!-- End Skills Item --> */}
