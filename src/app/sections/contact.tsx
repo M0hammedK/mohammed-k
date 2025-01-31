@@ -1,31 +1,147 @@
-import {
-  FaFacebook,
-  FaInstagram,
-  FaLinkedin,
-  FaGithub,
-} from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
 export default function Contact() {
   return (
-    <section className="py-16 md:py-24 ">
-      <div className="container px-4 mx-auto">
-        <h1 className="text text-2xl md:text-3xl font-semibold mb-6 md:mb-8 text-center">
-          Contact Me
-        </h1>
-        <div className="flex flex-wrap justify-center gap-4 md:gap-6">
-        {[
-        { href: "https://facebook.com", icon: FaFacebook, color: "text hover:text-blue-800" },
-        { href: "https://github.com", icon: FaGithub, color: "text hover:text-blue-800" },
-        { href: "https://instagram.com", icon: FaInstagram, color: "text hover:text-blue-800" },
-        { href: "https://linkedin.com", icon: FaLinkedin, color: "text hover:text-blue-800" },
-        { href: "https://linkedin.com", icon: FaXTwitter, color: "text hover:text-blue-800" },
-      ].map((social, index) => (
-        <a key={index} href={social.href} target="_blank" rel="noopener noreferrer">
-          <social.icon className={`size-8 transition-all duration-300 ${social.color}`} />
-        </a>
-      ))}
+    // <!-- Contact Section -->
+    <section id="contact" className="contact section">
+      {/* <!-- Section Title --> */}
+      <div className="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>
+          I Thankful for any contacting and I will responce as soon as posibble. I hope you enjoy browsing my website ☺ ♥.
+        </p>
+      </div>
+      {/* <!-- End Section Title --> */}
+
+      <div className="container" data-aos="fade-up" data-aos-delay="100">
+        <div className="row gy-4">
+          <div className="col-lg-5">
+            <div className="info-wrap">
+              <div
+                className="info-item d-flex"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                <i className="bi bi-geo-alt flex-shrink-0"></i>
+                <div>
+                  <h3>Address</h3>
+                  <p>Al-Mukalla, Hadhramout, Yemen</p>
+                </div>
+              </div>
+              {/* <!-- End Info Item --> */}
+
+              <div
+                className="info-item d-flex"
+                data-aos="fade-up"
+                data-aos-delay="300"
+              >
+                <i className="bi bi-telephone flex-shrink-0"></i>
+                <div>
+                  <h3>Call Us</h3>
+                  <p>+967 774 035 345</p>
+                </div>
+              </div>
+              {/* <!-- End Info Item --> */}
+
+              <div
+                className="info-item d-flex"
+                data-aos="fade-up"
+                data-aos-delay="400"
+              >
+                <i className="bi bi-envelope flex-shrink-0"></i>
+                <div>
+                  <h3>Email Us</h3>
+                  <p>mmm2016alkaf@gmail.com</p>
+                </div>
+              </div>
+              {/* <!-- End Info Item --> */}
+
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15447.696011901413!2d49.13426068459869!3d14.546338456430407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3de8e425d842c827%3A0x4c17c5473e84c6c3!2z2KfZhNmF2YPZhNin2Iwg2KfZhNmK2Y7ZhdmO2YY!5e0!3m2!1sar!2s!4v1738343421899!5m2!1sar!2s"
+                className="border:0; width: 100%; height: 270px;"
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+
+          <div className="col-lg-7">
+            <form
+              action="https://formspree.io/mmm2016alkaf@gmail.com"
+              method="POST"
+              className="php-email-form"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div className="row gy-4">
+                <div className="col-md-6">
+                  <label htmlFor="name-field" className="pb-2">
+                    Your Name
+                  </label>
+                  <input
+                    type="text"
+                    name="name"
+                    id="name-field"
+                    className="form-control"
+                    required
+                  />
+                </div>
+
+                <div className="col-md-6">
+                  <label htmlFor="email-field" className="pb-2">
+                    Your Email
+                  </label>
+                  <input
+                    type="email"
+                    className="form-control"
+                    name="email"
+                    id="email-field"
+                    required
+                  />
+                </div>
+
+                <div className="col-md-12">
+                  <label htmlFor="subject-field" className="pb-2">
+                    Subject
+                  </label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    name="subject"
+                    id="subject-field"
+                    required
+                  />
+                </div>
+
+                <div className="col-md-12">
+                  <label htmlFor="message-field" className="pb-2">
+                    Message
+                  </label>
+                  <textarea
+                    className="form-control"
+                    name="message"
+                    rows={10}
+                    id="message-field"
+                    required
+                  ></textarea>
+                </div>
+
+                <div className="col-md-12 text-center">
+                  <div className="loading">Loading</div>
+                  <div className="error-message"></div>
+                  <div className="sent-message">
+                    Your message has been sent. Thank you!
+                  </div>
+
+                  <button type="submit">Send Message</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          {/* <!-- End Contact Form --> */}
         </div>
       </div>
+
+      {/* <!-- /Contact Section --> */}
     </section>
   );
 }
