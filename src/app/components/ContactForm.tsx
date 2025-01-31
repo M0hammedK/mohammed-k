@@ -1,12 +1,14 @@
-"use client"
+"use client";
 
 import { useForm, ValidationError } from "@formspree/react";
 
 export default function ContactForm() {
-  const [state, handleSubmit] = useForm(`${process.env.NEXT_PUBLIC_FORM!}`);
-  if (state.succeeded) {
-    return <p>Thanks for joining!</p>;
-  }
+  const [state, handleSubmit] = useForm("xvgzrkeg");
+  try{
+    if (state.succeeded) {
+      return <h4>Thanks, I will response as soon as possible ♥</h4>;
+    }
+  }catch(err){}
   return (
     <form
       onSubmit={handleSubmit}
@@ -29,6 +31,8 @@ export default function ContactForm() {
           />
         </div>
 
+        <ValidationError prefix="Name" field="name" errors={state.errors} />
+
         <div className="col-md-6">
           <label htmlFor="email-field" className="pb-2">
             Your Email
@@ -40,6 +44,8 @@ export default function ContactForm() {
             id="email-field"
             required
           />
+
+          <ValidationError prefix="Email" field="email" errors={state.errors} />
         </div>
 
         <div className="col-md-12">
@@ -52,6 +58,12 @@ export default function ContactForm() {
             name="subject"
             id="subject-field"
             required
+          />
+
+          <ValidationError
+            prefix="Subject"
+            field="subject"
+            errors={state.errors}
           />
         </div>
 
@@ -66,16 +78,20 @@ export default function ContactForm() {
             id="message-field"
             required
           ></textarea>
+
+          <ValidationError
+            prefix="Message"
+            field="message"
+            errors={state.errors}
+          />
         </div>
 
         <div className="col-md-12 text-center">
-          <div className="loading">Loading</div>
-          <div className="error-message"></div>
-          <div className="sent-message">
-            Your message has been sent. Thank you!
-          </div>
 
-          <button type="submit" disabled={state.submitting}>Send Message</button>
+          <button type="submit" disabled={state.submitting}>
+            Send Message
+          </button>
+          <ValidationError errors={state.errors} />
         </div>
       </div>
     </form>
