@@ -1,10 +1,10 @@
-import About from "./sections/About";
-import Contact from "./sections/Contact";
-import Hero from "./sections/Hero";
-import Status from "./sections/Status";
-import Skills from "./sections/Skills";
-import Projects from "./sections/Projects";
-import Services from "./sections/Services";
+import About from "./sections/about";
+import Contact from "./sections/contact";
+import Hero from "./sections/hero";
+import Status from "./sections/status";
+import Skills from "./sections/skills";
+import Projects from "./sections/projects";
+import Services from "./sections/services";
 
 export default function Home() {
   return (
