@@ -3,3 +3,25 @@
 @tailwind components;
 @tailwind utilities;
 
+.progress {
+  height: 20px;
+  background: #e9ecef;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.progress-bar {
+  height: 100%;
+  background: #18d26e; /* Green color */
+  border-radius: 4px;
+  transition: width 0.9s ease;
+}
+
+.progress-bar-wrap {
+  height: 100%;
+}
+
+.skill {
+  display: block;
+  margin-bottom: 0.5rem;
+}

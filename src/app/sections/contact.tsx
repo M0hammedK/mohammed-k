@@ -58,7 +58,7 @@ export default function Contact() {
 
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15447.696011901413!2d49.13426068459869!3d14.546338456430407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3de8e425d842c827%3A0x4c17c5473e84c6c3!2z2KfZhNmF2YPZhNin2Iwg2KfZhNmK2Y7ZhdmO2YY!5e0!3m2!1sar!2s!4v1738343421899!5m2!1sar!2s"
-                className="border:0; width: 100%; height: 270px;"
+                className="scale-100 hover:scale-125 duration-300"
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
