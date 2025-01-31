@@ -4,6 +4,7 @@ import Navbar from "@/app/components/Navbar";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import {Analytics} from '@vercel/analytics/next'
 
 export const metadata: Metadata = {
   title: "Mohammed Al-Kaf",
@@ -48,7 +49,7 @@ export default function RootLayout({
       <body>
         <Navbar />
         <main>{children}</main>
-
+        <Analytics />
         <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
         <script src="assets/vendor/php-email-form/validate.js"></script>
         <script src="assets/vendor/aos/aos.js"></script>
