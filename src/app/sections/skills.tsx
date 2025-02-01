@@ -37,7 +37,7 @@ export default function Skills() {
                   <div
                     className="progress-bar"
                     role="progressbar"
-                    style={{ width: "90%" }}
+                    style={{ width: "80%" }}
                     aria-valuenow={100}
                     aria-valuemin={0}
                     aria-valuemax={100}
