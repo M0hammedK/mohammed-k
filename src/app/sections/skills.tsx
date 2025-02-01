@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function Skills() {
   return (
     <div>
@@ -109,7 +107,7 @@ export default function Skills() {
                   <div
                     className="progress-bar"
                     role="progressbar"
-                    style={{ width: "55%" }}
+                    style={{ width: "80%" }}
                     aria-valuenow={100}
                     aria-valuemin={0}
                     aria-valuemax={100}
