@@ -10,6 +10,7 @@ import food  from '../../../public/food.png'
 import blog  from '../../../public/blog.png'
 import buddy  from '../../../public/buddy.png'
 import dojo  from '../../../public/dojo.png'
+import Link from 'next/link'
 
 export default function Projects() {
   return (
@@ -42,26 +43,31 @@ export default function Projects() {
         >
           {/* Project 1 */}
           <SwiperSlide key="1" className="p-4">
+<Link href="https://my-reactapp-react.vercel.app">
             <div className="bg backdrop-blur-md rounded-lg shadow-lg p-8 hover:scale-105 transition-transform duration-300">
               <Image src={dojo} alt="dojo"></Image>
               <h3 className="text-2xl font-bold mb-3 text2">
                 DojoK Helpdesk
               </h3>
             </div>
+</Link>
           </SwiperSlide>
 
           {/* Signa */}
           <SwiperSlide key="2" className="p-4">
+<Link href="https://workout-buddy-ebon.vercel.app">
             <div className="bg backdrop-blur-md rounded-lg shadow-lg p-8 hover:scale-105 transition-transform duration-300">
               <Image src={buddy} alt="buddy"></Image>
               <h3 className="text-2xl font-bold mb-3 text2">
                 Workout Buddy
               </h3>
             </div>
+<\Link>
           </SwiperSlide>
 
           {/* Signa */}
           <SwiperSlide key="3" className="p-4">
+<Link href="https://dojo-k-helpdesk.vercel.app">
             <div className="bg backdrop-blur-md rounded-lg shadow-lg p-8 hover:scale-105 transition-transform duration-300">
               <Image src={blog} alt="blog"></Image>
               <h3 className="text-2xl font-bold mb-3 text2">
@@ -69,10 +75,12 @@ export default function Projects() {
               </h3>
              
             </div>
+</Link>
           </SwiperSlide>
 
           {/* Signa */}
           <SwiperSlide key="4" className="p-4">
+<Link href="https://foodal-kaf.vercel.app">
             <div className="bg backdrop-blur-md rounded-lg shadow-lg p-8 hover:scale-105 transition-transform duration-300">
               <Image src={food} alt="food"></Image>
               <h3 className="text-2xl font-bold mb-3 text2">
@@ -80,6 +88,7 @@ export default function Projects() {
               </h3>
             
             </div>
+</Link>
           </SwiperSlide>
         </Swiper>
 
