@@ -1,3 +1,4 @@
+import Link from 'next/link'
 
 function Navbar() {
 
@@ -6,11 +7,11 @@ function Navbar() {
     <div id="header" className="header dark-background d-flex flex-column pt-3">
     <i className="header-toggle d-xl-none bi bi-list"></i>
 
-    <a href="index.html" className="logo d-flex align-items-center justify-content-center">
+    <Link href="#hero" className="logo d-flex align-items-center justify-content-center">
       {/* Uncomment the line below if you also wish to use an image logo */}
        <img src="/me.jpg" alt=""/>
       <h1 className="sitename">Mohammed Al-Kaf</h1>
-    </a>
+    </Link>
 
     <div className="social-links text-center">
       <a href="#" className="twitter"><i className="bi bi-twitter-x"></i></a>
