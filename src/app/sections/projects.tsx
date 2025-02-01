@@ -62,7 +62,7 @@ export default function Projects() {
                 Workout Buddy
               </h3>
             </div>
-<\Link>
+</Link>
           </SwiperSlide>
 
           {/* Signa */}
